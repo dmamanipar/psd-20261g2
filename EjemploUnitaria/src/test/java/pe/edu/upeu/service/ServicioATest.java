@@ -4,6 +4,7 @@ import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.CsvFileSource;
 import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.MethodSource;
 
@@ -60,6 +61,14 @@ public class ServicioATest {
 
             );
         }
+
+        @ParameterizedTest(name = "suma({0},{1})={2}")
+        @CsvFileSource(resources = "/data/datatest.csv", numLinesToSkip = 1)
+        @DisplayName("Pruebas con datos en archivo")
+        void sumaParametrizadaFile(int num1, int num2, int num3){
+            Assertions.assertThat(servicioA.suma(num1, num2)).isEqualTo(num3);
+        }
+
     }
 
     @Test

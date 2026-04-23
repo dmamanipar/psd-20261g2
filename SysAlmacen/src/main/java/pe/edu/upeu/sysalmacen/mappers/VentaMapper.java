@@ -5,7 +5,7 @@ import org.mapstruct.Mapping;
 import pe.edu.upeu.sysalmacen.dtos.VentaDTO;
 import pe.edu.upeu.sysalmacen.modelo.Venta;
 
-@Mapper(componentModel = "spring")
+@Mapper(componentModel = "spring", uses = {VentaDetalleMapper.class, ClienteMapper.class, UsuarioMapper.class})
 public interface VentaMapper  extends GenericMapper<VentaDTO, Venta>{
     @Mapping(target = "cliente", ignore = true)  // Ignoramos aquí porque asignamos
     @Mapping(target = "usuario", ignore = true)

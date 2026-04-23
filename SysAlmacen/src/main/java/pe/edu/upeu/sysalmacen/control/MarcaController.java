@@ -4,14 +4,12 @@ import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import pe.edu.upeu.sysalmacen.dtos.MarcaDTO;
 import pe.edu.upeu.sysalmacen.excepciones.CustomResponse;
 import pe.edu.upeu.sysalmacen.mappers.MarcaMapper;
 import pe.edu.upeu.sysalmacen.modelo.Marca;
 import pe.edu.upeu.sysalmacen.servicio.IMarcaService;
 
-import java.net.URI;
 import java.time.LocalDateTime;
 import java.util.List;
 

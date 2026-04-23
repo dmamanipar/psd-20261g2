@@ -1,8 +1,8 @@
 package pe.edu.upeu.sysalmacen.excepciones;
+ 
+import pe.edu.upeu.sysalmacen.excepciones.ModelNotFoundException;
 
-
-import jakarta.annotation.Nullable;
-import jakarta.validation.constraints.NotNull;
+import org.springframework.lang.Nullable;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;

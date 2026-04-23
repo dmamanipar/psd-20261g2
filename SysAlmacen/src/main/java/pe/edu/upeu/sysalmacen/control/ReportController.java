@@ -4,21 +4,18 @@ import com.cloudinary.Cloudinary;
 import com.cloudinary.utils.ObjectUtils;
 import lombok.RequiredArgsConstructor;
 import org.cloudinary.json.JSONObject;
-import org.hibernate.query.Page;
-import org.springframework.data.domain.Pageable;
-import org.springframework.http.HttpHeaders;
+
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
-import pe.edu.upeu.sysalmacen.dtos.ProductoDTO;
+
 import pe.edu.upeu.sysalmacen.dtos.report.ProdMasVendidosDTO;
 import pe.edu.upeu.sysalmacen.modelo.MediaFile;
 import pe.edu.upeu.sysalmacen.servicio.IMediaFileService;
 import pe.edu.upeu.sysalmacen.servicio.IProductoService;
 
 import java.io.File;
-import java.io.FileOutputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.List;

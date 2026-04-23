@@ -40,10 +40,18 @@ class ICategoriaRepositoryTest {
     @Autowired
     private ICategoriaRepository categoriaRepository;
 
+    @Autowired
+    private IProductoRepository productoRepository;
+
+    @Autowired
+    private IVentaDetalleRepository ventaDetalleRepository;
+
     private Categoria categoriaGuardada;
 
     @BeforeEach
     void setUp() {
+        ventaDetalleRepository.deleteAll();
+        productoRepository.deleteAll();
         categoriaRepository.deleteAll();
         categoriaGuardada = categoriaRepository.save(
                 Categoria.builder().nombre("Electrónica").build());
